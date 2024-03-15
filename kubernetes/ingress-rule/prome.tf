@@ -19,7 +19,7 @@ resource "kubernetes_ingress_v1" "prome-ingress" {
             service{
               name = "prometheus-grafana"
               port {
-               number = 80 #chagned to allow for grafana
+               number = 80 #chagned to allow for grafana.
                }
           }
         }
