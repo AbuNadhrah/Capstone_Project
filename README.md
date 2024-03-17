@@ -45,37 +45,36 @@ git clone https://github.com/AbuNadhrah/Capstone_Project.git
 
 cd Capstone_Project
 
-3. Deploy the infrastructure using Terraform:
+3. Make the installer.sh executable and run it:
+   chmod +x installer.sh
+   ./installer.sh
 
-terraform init
-terraform apply
+   This will help install the various prerequisites e.g. aws cli, kubectl, jenkins, etc.
 
-4. Deploy the application using Helm:
+There are various options to proceed with deploying the application. Via manual terraform steps or by using a CI/CD deployment pipeline tool like jenkins
 
-helm install my-app ./chart
+4. With jenkins installed, using a browser, access the jenkins client with the //localhost:8080/
+5. Set up the tasks to execute:
+   EKS installation - which will create the cluster
+   Deploy Prometheus - which includes deployment of the various nodes, monitoring and certificate management
+   For the host registration, upon completion of the host name creation, register name servers on your host name provider platfom
+   
 
 
 ## Usage
-Describe how to use the application, including any CLI commands or URLs to access the application services.
+The sock-shop
+![sock-shop ariyo-olaniyan](https://github.com/AbuNadhrah/Capstone_Project/assets/13397947/bc354ed7-395f-4040-9d03-3950c182b731)
 
-## Contributing
-Please read CONTRIBUTING.md [^1^] for details on our code of conduct, and the process for submitting pull requests to us.
+Grafana for monitoring
+![grafana-project](https://github.com/AbuNadhrah/Capstone_Project/assets/13397947/a30b77c5-b0c4-4d05-9d42-3cad8cb904f1)
 
-## Versioning
-We use SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository [^2^].
+
 
 ## Authors
-•  [**Your Name**](https://www.bing.com/search?form=SKPBOT&q=Your%20Name) - *Initial work* - Your Profile [^3^]
+•  [**Abdullah Olaniyan**]
 
-
-See also the list of [contributors] who participated in this project.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE.md] file for details.
 
 ## Acknowledgments
-•  Hat tip to anyone whose code was used
+• https://microservices-demo.github.io/
 
-•  Inspiration
 
-•  etc
